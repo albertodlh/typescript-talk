@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple-child.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+				  <img class="plain" src="/img/logo.svg" width="600" />
+				  <h4>JavaScript que escala.</h4>
+				  <div class="spacer"></div>
+          <p>
+            <small><a href="http://www.albertodelahoz.com">Alberto De la Hoz</a> / <a href="http://twitter.com/albertodlh">@albertodlh</a></small>
+          </p>
+				</section>
+				<section>
+				  <img class="plain round" src="/img/me.png" width="350" />
+				  <h2>Alberto De la Hoz</h2>
+				  <p>Front End Dev. @ Koombea &bull; Ilustrador Wannabe &bull; Papá</p>
+				</section>
+				<section>
+				  <h2>¿Por qué estoy haciendo esta charla?</h2>
+				  <img class="fragment plain" src="/img/a2-logo.svg" style="height: 400px; width: auto;"/>
+				</section>
+				<section data-background="/img/fu.jpg" data-transition="zoom">
+				</section>
+				<section>
+				  <h2>¿Por qué TypeScript?</h2>
+				</section>
+				<section>
+				  <h1 class="huge hlight">10</h1>
+				  <h2 class="white">días</h2>
+				  <p class="fragment">* aproximadamente.</p>
+				</section>
+				<section>
+				  <h2>¿Qué es TypeScript?</h2>
+				</section>
+				<section>
+					<pre><code class="hljs javascript" data-trim contenteditable>
+function repeatWord(word, times) {
+  var repeated = "";
+  var i;
+  for (i = 0; i < times; i++) {
+    repeated += word;
+  }
+  return repeated;
+}
+
+// ¿Mamá, puedo repetir postre?
+
+var l = repeatWord('postre', 4);
+
+console.log(l); //postrepostrepostrepostre
+					</code></pre>
+					<p class="fragment">TypeScript es una <strong>superclase</strong> de JavaScript</p>
+				</section>
+				<section>
+				  <ul>
+            <li class="">Añade <span class="hlight">tipado estático</span> a JavaScript.</li>
+            <li class="fragment">Incluye características de <span class="hlight">ECMAStript2015</span> (objetos basados en clases, módulos, funciones anónimas abreviadas)</li>
+            <li class="fragment">Añade <span class="hlight">características extra</span> como interfaces, namespaces, decorators, entre otros.</li>
+            <li class="fragment">Es <span class="hlight">compilado a JS legible</span>.</li>
+            <li class="fragment">Open Source. Desarrollado por <span class="hlight">Microsoft</span></li>
+            <li class="fragment">...momento. ¿Microsoft? &gt;_&gt;</li>
+          </ul>
+				</section>
+				<section>
+				  <p><em>"Es desarrollado por niños genio cuyos algoritmos van más allá de tu comprensión, y visten con ropa de los 90's"</em></p>
+				  <p><small>- Andrés Rojas -</small></p>
+				  <img class="fragment" src="/img/nerd.jpg">
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				width: 1024,
+
+				transition: 'concave',
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
